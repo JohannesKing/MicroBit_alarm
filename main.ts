@@ -98,3 +98,11 @@ basic.forever(function () {
             `)
     }
 })
+basic.forever(function () {
+    if (input.magneticForce(Dimension.X) < 200) {
+        if (alarmed == 1) {
+            alarmed = 0
+            Alarm = 1
+        }
+    }
+})
