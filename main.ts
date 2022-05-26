@@ -2,6 +2,9 @@ input.onButtonPressed(Button.A, function () {
     alarmed = 1
     music.playMelody("C C5 C C5 - - - - ", 500)
 })
+input.onButtonPressed(Button.B, function () {
+    basic.showNumber(input.magneticForce(Dimension.Strength))
+})
 input.onGesture(Gesture.Shake, function () {
     if (alarmed == 1) {
         alarmed = 0
@@ -99,7 +102,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (input.magneticForce(Dimension.X) < 200) {
+    if (input.magneticForce(Dimension.Strength) < 200) {
         if (alarmed == 1) {
             alarmed = 0
             Alarm = 1
