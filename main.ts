@@ -102,7 +102,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (input.magneticForce(Dimension.Strength) < 200) {
+    if (input.magneticForce(Dimension.Strength) < 1800) {
         if (alarmed == 1) {
             alarmed = 0
             Alarm = 1
